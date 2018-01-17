@@ -6,7 +6,7 @@
         <!--Search-->
         <div class="container">
 
-            <form class="form-inline pull-left" action="customers.index" method="get">
+            <form class="form-inline pull-left" action="#" method="get">
                 @include('customers.index_fields')
             </form>
         </div>

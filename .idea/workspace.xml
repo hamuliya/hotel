@@ -35,11 +35,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomerController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,11 +67,53 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/customers/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding>
+                <marker date="1516227899421" expanded="true" signature="9:22" ph="..." />
+                <marker date="1516227899421" expanded="true" signature="33:42" ph="..." />
+                <marker date="1516227899421" expanded="true" signature="280:304" ph="..." />
+                <marker date="1516227899421" expanded="true" signature="518:545" ph="..." />
+                <marker date="1516227899421" expanded="true" signature="671:687" ph="..." />
+                <marker date="1516227899421" expanded="true" signature="824:841" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_fields.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/customers/index_fields.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <marker date="1516227850536" expanded="true" signature="54:123" ph="..." />
+                <marker date="1516227850536" expanded="true" signature="135:166" ph="..." />
+                <marker date="1516227850536" expanded="true" signature="234:300" ph="..." />
+                <marker date="1516227850536" expanded="true" signature="311:341" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RoomController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="52" column="56" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="56" />
+            <state relative-caret-position="388">
+              <caret line="118" column="70" lean-forward="true" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -174,7 +226,6 @@
         <option value="$PROJECT_DIR$/app/Models/Room.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/room_types/table.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RoomTypeController.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/show_fields.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Reservation.php" />
@@ -187,9 +238,7 @@
         <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/customers/index_fields.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/index_fields.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/customers/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RoomController.php" />
         <option value="$PROJECT_DIR$/resources/views/rooms/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -198,6 +247,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" />
         <option value="$PROJECT_DIR$/public/css/site.css" />
         <option value="$PROJECT_DIR$/resources/views/reservations/index_fields.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/customers/index_fields.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/customers/index.blade.php" />
       </list>
     </option>
   </component>
@@ -324,7 +376,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="265" />
     <option name="y" value="66" />
     <option name="width" value="1510" />
@@ -439,7 +491,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="css&#9;FILE&#9;file://C:/Project/hotel/public/css/site.css&#10;env&#9;FILE&#9;file://C:/Project/hotel/.env&#10;web&#9;FILE&#9;file://C:/Project/hotel/routes/web.php&#10;app.&#9;FILE&#9;file://C:/Project/hotel/resources/views/layouts/app.blade.php&#10;seed&#9;FILE&#9;file://C:/Project/hotel/database/seeds/UsersTableSeeder.php&#10;app&#9;FILE&#9;file://C:/Project/hotel/resources/views/layouts/app.blade.php&#10;room&#9;null&#9;null&#10;Res&#9;FILE&#9;file://C:/Project/hotel/app/Http/Controllers/ReservationController.php&#10;fields.blade.php&#9;FILE&#9;file://C:/Project/hotel/resources/views/customers/fields.blade.php&#10;fields.blade&#9;FILE&#9;file://C:/Project/hotel/resources/views/reservations/fields.blade.php&#10;appp&#9;FILE&#9;file://C:/Project/hotel/config/app.php&#10;composer&#9;FILE&#9;file://C:/Project/hotel/vendor/laravel/framework/composer.json&#10;ProviderRepository.php&#9;FILE&#9;file://C:/Project/hotel/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php&#10;composer.&#9;FILE&#9;file://C:/Project/hotel/composer.json&#10;user&#9;FILE&#9;file://C:/Project/hotel/database/migrations/2018_01_15_201539_create_users_table.php&#10;View&#9;null&#9;null&#10;Model &#9;null&#9;null&#10;model&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/database/factories/ModelFactory.php&#10;Form&#9;null&#9;null&#10;guest&#9;null&#9;null&#10;validators&#9;null&#9;null&#10;app.p&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/config/app.php&#10;validate&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Validate.php&#10;form&#9;null&#9;null&#10;routeserviceprovider.php&#9;FILE&#9;file://C:/xampp/htdocs/test/app/Providers/RouteServiceProvider.php&#10;composer.json&#9;FILE&#9;file://C:/xampp/htdocs/test/vendor/laravel/framework/composer.json&#10;composer.php&#9;FILE&#9;file://C:/xampp/htdocs/test/vendor/laravel/framework/src/Illuminate/Support/Composer.php&#10;co&#9;FILE&#9;file://C:/xampp/htdocs/test/composer.json&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/test/config/app.php&#10;app.ph&#9;FILE&#9;file://C:/xampp/htdocs/test/bootstrap/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="we&#9;FILE&#9;file://C:/Project/hotel/routes/web.php&#10;css&#9;FILE&#9;file://C:/Project/hotel/public/css/site.css&#10;env&#9;FILE&#9;file://C:/Project/hotel/.env&#10;web&#9;FILE&#9;file://C:/Project/hotel/routes/web.php&#10;app.&#9;FILE&#9;file://C:/Project/hotel/resources/views/layouts/app.blade.php&#10;seed&#9;FILE&#9;file://C:/Project/hotel/database/seeds/UsersTableSeeder.php&#10;app&#9;FILE&#9;file://C:/Project/hotel/resources/views/layouts/app.blade.php&#10;room&#9;null&#9;null&#10;Res&#9;FILE&#9;file://C:/Project/hotel/app/Http/Controllers/ReservationController.php&#10;fields.blade.php&#9;FILE&#9;file://C:/Project/hotel/resources/views/customers/fields.blade.php&#10;fields.blade&#9;FILE&#9;file://C:/Project/hotel/resources/views/reservations/fields.blade.php&#10;appp&#9;FILE&#9;file://C:/Project/hotel/config/app.php&#10;composer&#9;FILE&#9;file://C:/Project/hotel/vendor/laravel/framework/composer.json&#10;ProviderRepository.php&#9;FILE&#9;file://C:/Project/hotel/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php&#10;composer.&#9;FILE&#9;file://C:/Project/hotel/composer.json&#10;user&#9;FILE&#9;file://C:/Project/hotel/database/migrations/2018_01_15_201539_create_users_table.php&#10;View&#9;null&#9;null&#10;Model &#9;null&#9;null&#10;model&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/database/factories/ModelFactory.php&#10;Form&#9;null&#9;null&#10;guest&#9;null&#9;null&#10;validators&#9;null&#9;null&#10;app.p&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/config/app.php&#10;validate&#9;FILE&#9;file://C:/Users/18495_000/Project/hotel/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Validate.php&#10;form&#9;null&#9;null&#10;routeserviceprovider.php&#9;FILE&#9;file://C:/xampp/htdocs/test/app/Providers/RouteServiceProvider.php&#10;composer.json&#9;FILE&#9;file://C:/xampp/htdocs/test/vendor/laravel/framework/composer.json&#10;composer.php&#9;FILE&#9;file://C:/xampp/htdocs/test/vendor/laravel/framework/src/Illuminate/Support/Composer.php&#10;co&#9;FILE&#9;file://C:/xampp/htdocs/test/composer.json&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/test/config/app.php&#10;app.ph&#9;FILE&#9;file://C:/xampp/htdocs/test/bootstrap/app.php" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -524,15 +576,15 @@
       <workItem from="1516060913894" duration="16694000" />
       <workItem from="1516125982171" duration="30576000" />
       <workItem from="1516213428863" duration="766000" />
-      <workItem from="1516214841024" duration="9861000" />
+      <workItem from="1516214841024" duration="10667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127035000" />
+    <option name="totallyTimeSpent" value="127841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -803,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/customers/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Room.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -837,32 +882,6 @@
         <state relative-caret-position="204">
           <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/customers/index_fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="49" />
-          <folding>
-            <marker date="1516155171916" expanded="true" signature="358:424" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,21 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/reservations/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <marker date="1516218634261" expanded="true" signature="9:22" ph="..." />
-            <marker date="1516218634261" expanded="true" signature="34:43" ph="..." />
-            <marker date="1516218634261" expanded="true" signature="284:311" ph="..." />
-            <marker date="1516218634261" expanded="true" signature="485:515" ph="..." />
-            <marker date="1516218634261" expanded="true" signature="643:659" ph="..." />
-            <marker date="1516218634261" expanded="true" signature="801:821" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReservationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
@@ -1005,14 +1009,6 @@
           <folding>
             <element signature="e#40#87#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="52" column="56" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,6 +1036,73 @@
         <state relative-caret-position="221">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RoomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="118" column="70" lean-forward="true" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/reservations/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <marker date="1516218634261" expanded="true" signature="9:22" ph="..." />
+            <marker date="1516218634261" expanded="true" signature="34:43" ph="..." />
+            <marker date="1516218634261" expanded="true" signature="284:311" ph="..." />
+            <marker date="1516218634261" expanded="true" signature="485:515" ph="..." />
+            <marker date="1516218634261" expanded="true" signature="643:659" ph="..." />
+            <marker date="1516218634261" expanded="true" signature="801:821" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/customers/index_fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1516227850536" expanded="true" signature="54:123" ph="..." />
+            <marker date="1516227850536" expanded="true" signature="135:166" ph="..." />
+            <marker date="1516227850536" expanded="true" signature="234:300" ph="..." />
+            <marker date="1516227850536" expanded="true" signature="311:341" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/customers/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <marker date="1516227899421" expanded="true" signature="9:22" ph="..." />
+            <marker date="1516227899421" expanded="true" signature="33:42" ph="..." />
+            <marker date="1516227899421" expanded="true" signature="280:304" ph="..." />
+            <marker date="1516227899421" expanded="true" signature="518:545" ph="..." />
+            <marker date="1516227899421" expanded="true" signature="671:687" ph="..." />
+            <marker date="1516227899421" expanded="true" signature="824:841" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

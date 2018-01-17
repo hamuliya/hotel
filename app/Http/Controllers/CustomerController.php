@@ -77,14 +77,13 @@ class CustomerController extends AppBaseController
         else
         {
             //search all
-            $customers=Customer::where('deleted_at',NULL)->orderby('firstName')->get();
+            $customers=Customer::where('deleted_at',NULL)->orderby('firstName')->paginate(10);
 
         }
 
-        
-        return view('customers.index')
-            ->with('customers', $customers);
-        
+
+        return view('customers.index', compact('customers'));
+
     }
 
     /**
