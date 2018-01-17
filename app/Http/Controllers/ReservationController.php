@@ -8,13 +8,14 @@ use App\Models\Customer;
 use App\Models\Reservation;
 use App\Models\Room;
 use App\Repositories\ReservationRepository;
+use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
 use InfyOm\Generator\Controller\AppBaseController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
-use Response;
+
+use Laracasts\Flash\Flash;
+
 
 class ReservationController extends AppBaseController
 {
@@ -24,18 +25,19 @@ class ReservationController extends AppBaseController
     public function __construct(ReservationRepository $reservationRepo)
     {
         $this->reservationRepository = $reservationRepo;
+
+
     }
 
 
     private function getRoomsName()
     {
 
-        $roomsName=Room::where('deleted_at',NULL)->orderby('roomName')->get();
+        $roomsName = Room::where('deleted_at', NULL)->orderby('roomName')->get();
 
-        $roomsNameArray=array();
-        foreach ($roomsName as $room)
-        {
-            $roomsNameArray[$room->id]=$room->roomName;
+        $roomsNameArray = array();
+        foreach ($roomsName as $room) {
+            $roomsNameArray[$room->id] = $room->roomName;
         }
         return $roomsNameArray;
     }
@@ -44,14 +46,10 @@ class ReservationController extends AppBaseController
     private function getCustomersName()
     {
 
-
-
-        $customersName=Customer::where('deleted_at',NULL)->orderby('firstName','lastName')->get();
-
-        $customersNameArray=array();
-        foreach ($customersName as $customer)
-        {
-            $customersNameArray[$customer->id]=$customer->firstName.' '.$customer->lastName;
+        $customersName = Customer::where('deleted_at', NULL)->orderby('firstName', 'lastName')->get();
+        $customersNameArray = array();
+        foreach ($customersName as $customer) {
+            $customersNameArray[$customer->id] = $customer->firstName . ' ' . $customer->lastName;
         }
         return $customersNameArray;
     }
@@ -65,30 +63,117 @@ class ReservationController extends AppBaseController
      */
 
 
-
-
     public function index(Request $request)
     {
 
 
-       /* $reservations = Reservation::where([
-            ['deleted_at', '=', NULL],
-        ])->orderby('startDate')->paginate(10);
-       */
+        $startDate = Carbon::today();
+        $startDay = $startDate->day;
+        $startMonth = $startDate->month;
+        $startYear = $startDate->year;
 
 
-        $reservations = DB::table('reservations')
-            ->where([
-                ['reservations.deleted_at', '=', NULL],
-            ])
-            ->leftJoin('rooms', 'reservations.roomId', '=', 'rooms.id')
-            ->leftJoin('customers', 'reservations.customerId', '=', 'customers.Id')
-            ->select('reservations.*','rooms.roomName','customers.firstName as firstName','customers.lastName as lastName','reservations.id as id')
-            ->orderby('startDate')
-            ->Paginate(10);
+        $endDate = Carbon::today()->addDays(1);
+        $endDay = $endDate->day;
+        $endMonth = $endDate->month;
+        $endYear = $endDate->year;
 
 
-        return view('reservations.index', compact('reservations'));
+        $firstName = $request->get('firstName');
+        $lastName = $request->get('lastName');
+        if ($request->get('startDate') != null) {
+            $startDate = $request->get('startDate');
+
+        }
+
+        if ($request->get('endDate') != null) {
+            $endDate = $request->get('endDate');
+
+        }
+
+
+        if ($firstName != "" || $lastName != "") {
+
+            if ($firstName != "" && $lastName != "") {
+
+                $reservations = DB::table('reservations')
+                    ->where([
+                        ['reservations.deleted_at', '=', NULL],
+                    ])
+                    ->leftJoin('rooms', 'reservations.roomId', '=', 'rooms.id')
+                    ->leftJoin('customers', 'reservations.customerId', '=', 'customers.Id')
+                    ->select('reservations.*', 'rooms.roomName', 'customers.firstName as firstName', 'customers.lastName as lastName', 'reservations.id as id')
+                    ->where([['startDate', '>=', $startDate],
+                        ['startDate', '<=', $endDate],
+                        ['rooms.deleted_at', '=', NULL],
+                        ['firstName', 'like', $firstName . '%'],
+                        ['lastName', 'like', $lastName . '%']
+                    ])
+                    ->orderby('startDate')
+                    ->Paginate(10);
+
+            } else {
+
+                if ($firstName != "") {
+
+                    $reservations = DB::table('reservations')
+                        ->where([
+                            ['reservations.deleted_at', '=', NULL],
+                        ])
+                        ->leftJoin('rooms', 'reservations.roomId', '=', 'rooms.id')
+                        ->leftJoin('customers', 'reservations.customerId', '=', 'customers.Id')
+                        ->select('reservations.*', 'rooms.roomName', 'customers.firstName as firstName', 'customers.lastName as lastName', 'reservations.id as id')
+                        ->where([['startDate', '>=', $startDate],
+                            ['startDate', '<=', $endDate],
+                            ['rooms.deleted_at', '=', NULL],
+                            ['firstName', 'like', $firstName . '%'],
+                        ])
+                        ->orderby('startDate')
+                        ->Paginate(10);
+
+                }
+                if ($lastName != "") {
+
+                    $reservations = DB::table('reservations')
+                        ->where([
+                            ['reservations.deleted_at', '=', NULL],
+                        ])
+                        ->leftJoin('rooms', 'reservations.roomId', '=', 'rooms.id')
+                        ->leftJoin('customers', 'reservations.customerId', '=', 'customers.Id')
+                        ->select('reservations.*', 'rooms.roomName', 'customers.firstName as firstName', 'customers.lastName as lastName', 'reservations.id as id')
+                        ->where([['startDate', '>=', $startDate],
+                            ['startDate', '<=', $endDate],
+                            ['rooms.deleted_at', '=', NULL],
+                            ['lastName', 'like', $lastName . '%']
+                        ])
+                        ->orderby('startDate')
+                        ->Paginate(10);
+                }
+
+
+            }
+
+
+        } else {
+
+
+            $reservations = DB::table('reservations')
+                ->where([
+                    ['reservations.deleted_at', '=', NULL],
+                ])
+                ->leftJoin('rooms', 'reservations.roomId', '=', 'rooms.id')
+                ->leftJoin('customers', 'reservations.customerId', '=', 'customers.Id')
+                ->select('reservations.*', 'rooms.roomName', 'customers.firstName as firstName', 'customers.lastName as lastName', 'reservations.id as id')
+                ->where([['startDate', '>=', $startDate],
+                    ['startDate', '<=', $endDate],
+                    ['rooms.deleted_at', '=', NULL]
+                ])
+                ->orderby('startDate')
+                ->Paginate(10);
+
+
+        }
+        return view('reservations.index', compact('reservations', 'startDay', 'startMonth', 'startYear', 'endDay', 'endMonth', 'endYear'));
 
     }
 
@@ -99,20 +184,20 @@ class ReservationController extends AppBaseController
      */
     public function create()
     {
-        $roomsNameArray=$this->getRoomsName();
-        $customersNameArray=$this->getCustomersName();
+        $roomsNameArray = $this->getRoomsName();
+        $customersNameArray = $this->getCustomersName();
 
-        $startDate = Carbon::now();
+        $startDate = Carbon::today();
         $startDay = $startDate->day;
         $startMonth = $startDate->month;
         $startYear = $startDate->year;
 
-        $endDate = Carbon::now()->addDays(1);
+        $endDate = Carbon::today()->addDays(1);
         $endDay = $endDate->day;
         $endMonth = $endDate->month;
         $endYear = $endDate->year;
 
-        return view('reservations.create',compact('roomsNameArray','customersNameArray','startDay','startMonth','startYear','endDay','endMonth','endYear'));
+        return view('reservations.create', compact('roomsNameArray', 'customersNameArray', 'startDay', 'startMonth', 'startYear', 'endDay', 'endMonth', 'endYear'));
     }
 
     /**
@@ -164,8 +249,8 @@ class ReservationController extends AppBaseController
      */
     public function edit($id)
     {
-        $roomsNameArray=$this->getRoomsName();
-        $customersNameArray=$this->getCustomersName();
+        $roomsNameArray = $this->getRoomsName();
+        $customersNameArray = $this->getCustomersName();
         $reservation = $this->reservationRepository->findWithoutFail($id);
 
         if (empty($reservation)) {
@@ -186,13 +271,13 @@ class ReservationController extends AppBaseController
         $endYear = $endDate->year;
 
 
-        return view('reservations.edit',compact('reservation','roomsNameArray','customersNameArray','startDay','startMonth','startYear','endDay','endMonth','endYear'));
+        return view('reservations.edit', compact('reservation', 'roomsNameArray', 'customersNameArray', 'startDay', 'startMonth', 'startYear', 'endDay', 'endMonth', 'endYear'));
     }
 
     /**
      * Update the specified Reservation in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateReservationRequest $request
      *
      * @return Response

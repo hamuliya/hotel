@@ -37,3 +37,4 @@ Route::resource('rooms', 'RoomController');
 Route::resource('users', 'UserController');
 
 Route::resource('users', 'UserController');
+

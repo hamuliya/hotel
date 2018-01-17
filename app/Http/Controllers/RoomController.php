@@ -114,9 +114,8 @@ class RoomController extends AppBaseController
                 ->orderby('roomName')
                 ->Paginate(10);
 
-
         }
-        
+
         return view('rooms.index', compact('rooms','roomTypesArray'));
 
     }
